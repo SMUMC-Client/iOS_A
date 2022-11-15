@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="alarm_clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="yZy-nz-ffo">
+                                <rect key="frame" x="0.0" y="198" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Ro5-mP-LEC"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="dFR-Gp-Cbi"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재시간 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B6-HO-0QK">
+                                <rect key="frame" x="32" y="598" width="350" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="OKR-ay-IfU"/>
+                                    <constraint firstAttribute="height" constant="25" id="nQf-c4-DY0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택시간 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-H7-RAE">
+                                <rect key="frame" x="32" y="659" width="350" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="0ds-o2-D3l"/>
+                                    <constraint firstAttribute="height" constant="25" id="Pt5-Nt-YQ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-h5-6oO">
+                                <rect key="frame" x="32" y="726" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-14-con">
+                                <rect key="frame" x="187" y="497" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-3Q-2XE">
+                                <rect key="frame" x="32" y="726" width="350" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yZy-nz-ffo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1UT-Zw-gQj"/>
+                            <constraint firstItem="Aib-H7-RAE" firstAttribute="centerX" secondItem="0B6-HO-0QK" secondAttribute="centerX" id="9wG-ad-6sJ"/>
+                            <constraint firstItem="Aib-H7-RAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Blc-kc-gEz"/>
+                            <constraint firstItem="0B6-HO-0QK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="MFC-qb-muc"/>
+                            <constraint firstItem="0B6-HO-0QK" firstAttribute="top" secondItem="yZy-nz-ffo" secondAttribute="bottom" constant="150" id="Mz9-Wt-MfW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yZy-nz-ffo" secondAttribute="trailing" id="OeA-Lk-lQE"/>
+                            <constraint firstItem="yZy-nz-ffo" firstAttribute="centerX" secondItem="0B6-HO-0QK" secondAttribute="centerX" id="UvA-q1-eHc"/>
+                            <constraint firstItem="yZy-nz-ffo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="fc0-s1-Q89"/>
+                            <constraint firstItem="Aib-H7-RAE" firstAttribute="top" secondItem="0B6-HO-0QK" secondAttribute="bottom" constant="36" id="gpB-gd-c9k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0B6-HO-0QK" secondAttribute="trailing" constant="32" id="oMP-lN-4yP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aib-H7-RAE" secondAttribute="trailing" constant="32" id="sWn-uA-04I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IbCurrentTime" destination="0B6-HO-0QK" id="bUN-BW-IMd"/>
+                        <outlet property="IbPickerTime" destination="Aib-H7-RAE" id="dZc-SJ-3u6"/>
+                        <outlet property="UIView" destination="Rad-14-con" id="5p7-3b-x5i"/>
+                        <outlet property="countLabel" destination="eq5-3Q-2XE" id="eKz-9p-ptE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.376811594202906" y="-2.6785714285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
