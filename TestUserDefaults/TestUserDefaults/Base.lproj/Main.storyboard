@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVu-Lb-sbn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bHg-83-m2g">
+            <objects>
+                <viewController id="FVu-Lb-sbn" customClass="ViewController" customModule="alarm_clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RM2-yk-nG3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="1w1-NW-Col">
+                                <rect key="frame" x="0.0" y="198" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="xe9-oP-TVe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="FVu-Lb-sbn" eventType="valueChanged" id="6fx-xk-6DS"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재시간 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-UN-XhW">
+                                <rect key="frame" x="32" y="598" width="350" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="G43-mj-MhF"/>
+                                    <constraint firstAttribute="width" constant="350" id="W1U-ir-UUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택시간 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ1-vz-UrD">
+                                <rect key="frame" x="32" y="659" width="350" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0Jo-41-yX8"/>
+                                    <constraint firstAttribute="width" constant="350" id="5IT-rm-b7z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-cF-Nan">
+                                <rect key="frame" x="32" y="726" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oco-3V-ow3">
+                                <rect key="frame" x="32" y="726" width="350" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xwk-g2-ETs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJ1-vz-UrD" firstAttribute="top" secondItem="CQG-UN-XhW" secondAttribute="bottom" constant="36" id="4kq-S6-0dr"/>
+                            <constraint firstItem="1w1-NW-Col" firstAttribute="leading" secondItem="Xwk-g2-ETs" secondAttribute="leading" id="5x6-Gg-dKy"/>
+                            <constraint firstItem="Xwk-g2-ETs" firstAttribute="trailing" secondItem="cJ1-vz-UrD" secondAttribute="trailing" constant="32" id="8DE-d5-4AQ"/>
+                            <constraint firstItem="cJ1-vz-UrD" firstAttribute="leading" secondItem="Xwk-g2-ETs" secondAttribute="leading" constant="32" id="IE9-QV-Hrw"/>
+                            <constraint firstItem="CQG-UN-XhW" firstAttribute="top" secondItem="1w1-NW-Col" secondAttribute="bottom" constant="150" id="QAx-Sa-jeM"/>
+                            <constraint firstItem="Xwk-g2-ETs" firstAttribute="trailing" secondItem="1w1-NW-Col" secondAttribute="trailing" id="RLZ-Ee-vFy"/>
+                            <constraint firstItem="Xwk-g2-ETs" firstAttribute="trailing" secondItem="CQG-UN-XhW" secondAttribute="trailing" constant="32" id="YPl-Ke-UPw"/>
+                            <constraint firstItem="cJ1-vz-UrD" firstAttribute="centerX" secondItem="CQG-UN-XhW" secondAttribute="centerX" id="cLS-LU-Lmm"/>
+                            <constraint firstItem="CQG-UN-XhW" firstAttribute="leading" secondItem="Xwk-g2-ETs" secondAttribute="leading" constant="32" id="fVb-O0-MXB"/>
+                            <constraint firstItem="1w1-NW-Col" firstAttribute="top" secondItem="Xwk-g2-ETs" secondAttribute="top" constant="150" id="nCp-gs-pAb"/>
+                            <constraint firstItem="1w1-NW-Col" firstAttribute="centerX" secondItem="CQG-UN-XhW" secondAttribute="centerX" id="oOw-2h-irN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IbCurrentTime" destination="CQG-UN-XhW" id="5Iu-kD-X6d"/>
+                        <outlet property="IbPickerTime" destination="cJ1-vz-UrD" id="nuY-Vk-H6i"/>
+                        <outlet property="countLabel" destination="Oco-3V-ow3" id="JBf-HR-zbm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lau-Mm-Oo2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.376811594202906" y="-2.6785714285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
